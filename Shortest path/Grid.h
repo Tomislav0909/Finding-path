@@ -16,4 +16,6 @@ private:
     Path* path;
     std::stack<std::pair<int, int>> calculatedPath;
     std::pair<int, int> start, finish;
+
+    void createWall();
 };

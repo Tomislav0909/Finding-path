@@ -5,8 +5,6 @@ Path::Path(Cell** grid, std::pair<int, int> start, std::pair<int, int> finish)
     this->grid = grid;
     this->start = start;
     this->finish = finish;
-    // uncomment for wall
-    //createWall(); 
     calculatePath(start.first, start.second);
 }
 
@@ -63,10 +61,4 @@ bool Path::isValid(int row, int col)
 		return false;
 
 	return true;
-}
-
-void Path::createWall()
-{
-    for (int i = 0; i < 30; i++)
-        grid[i][39].rs.setFillColor(sf::Color::Blue);
 }

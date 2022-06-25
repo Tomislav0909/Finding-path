@@ -23,9 +23,9 @@ private:
         rs.setPosition(sf::Vector2f(0, 0));
         rs.setFillColor(sf::Color::Black);
         // Uncomment for outlines
-       /* rs.setOutlineColor(sf::Color::White);
+        /*rs.setOutlineColor(sf::Color::White);
         rs.setOutlineThickness(1.f);*/
-        rs.setSize(sf::Vector2f(9.f, 9.f));
+        rs.setSize(sf::Vector2f(10.f, 10.f));
         return rs;
     }
 };
@@ -56,7 +56,4 @@ private:
     // Direction vectors
     int dRow[4] = { -1, 0, 1, 0 };
     int dCol[4] = { 0, 1, 0, -1 };
-
-    //Create wall
-    void createWall();
 };

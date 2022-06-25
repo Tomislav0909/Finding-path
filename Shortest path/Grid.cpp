@@ -5,6 +5,8 @@ Grid::Grid(std::pair<int, int> start, std::pair<int, int> finish)
 	init();
 	this->start = start;
 	this->finish = finish;
+	// uncomment for wall
+	//this->createWall();
 	grid[start.first][start.second].rs.setFillColor(sf::Color::Red);
 	grid[finish.first][finish.second].rs.setFillColor(sf::Color::Green);
 	this->path = new Path(grid, start, finish);
@@ -65,4 +67,10 @@ void Grid::init()
 			grid[y][x].rs.setPosition(sf::Vector2f(10.f * x, 10.f * y));
 		}
 	}
+}
+
+void Grid::createWall()
+{
+	for (int i = 0; i < 30; i++)
+		grid[i][39].rs.setFillColor(sf::Color::Blue);
 }
